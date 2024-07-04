@@ -1,0 +1,4 @@
+edu\ifmt\adocao\controller\TituloController.class
+edu\ifmt\adocao\repository\Titulos.class
+edu\ifmt\adocao\model\Titulo.class
+edu\ifmt\adocao\AdocaoApplication.class

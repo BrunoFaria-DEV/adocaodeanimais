@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <title>Cadastro de Título</title>
+</head>
+<body>
+	<nav class ="navbar navbar-dar bg-primary">
+		<a class="navbar-brand">
+			<img src="/images/ifmtlogo.png" width="50" height="50" alt="IFMT"/>
+		</a>
+	</nav>
+    <h1>Cadastro de Título</h1>
+    <form action="#" th:action="@{/titulos}" th:object="${titulo}" method="post">
+        <div class="card">
+			<div class="card-header tux-titulo-panel"> 
+				<span class= "tux-titulo-panel">Novo título</span>
+			</div>
+			<div class="card-body">
+				<div class="form-group row">
+	            	<label for="descricao" class="col-sm-2 col form-label">Nome do Adotante:</label>
+					<div class="col-sm-4">
+	            		<input type="text" th:field="*{nomeAdotante}" />
+					</div>
+				</div>
+				<div class="form-group row">
+		            <label for="descricao" class="col-sm-2 col form-label">Animal:</label>
+					<div class="col-sm-4">
+		            	<input type="text" th:field="*{animal}" />
+					</div>
+        		</div>
+				<div class="form-group row">
+		            <label for="descricao" class="col-sm-2 col form-label">Raça Adotada:</label>
+					<div class="col-sm-4">
+		            	<input type="text" th:field="*{racaAdotada}" />
+					</div>
+        		</div>
+				<div class="form-group row">
+					<label for="descricao" class="col-sm-2 col form-label">Idade:</label>
+					<div class="col-sm-4">
+						<input type="number" th:field="*{idade}" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="descricao" class="col-sm-2 col form-label">Data de Adoção:</label>
+					<div class="col-sm-4">
+						<input type="date" th:field="*{dataDeAdocao}" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-md-2 offset-md-2 col-sm-10">
+            			<button type="submit">Salvar</button>
+					</div>
+				</div>
+        	</div>
+		</div>
+    </form>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
